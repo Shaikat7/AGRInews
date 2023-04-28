@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Scroll -->
+    <div class="container my-4">
+        <div class="row">   
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h3>{{ heading }}</h3>
+                        <hr>
+                    </div>
+                    <div class="accordion" id="accordionExample">
+                        {% for news in news_list %}
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading{{ forloop.counter }}">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse{{ forloop.counter }}">
+                                    {{ news.title }}
+                                </button>
+                            </h2>
+                            <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse" aria-labelledby="heading{{ forloop.counter }}"
+                                 data-bs-parent="#accordionExample">
+                                 <div class="accordion-body" style="display: flex; align-items: center;">
+                                    <div style="padding: 7px; background-color: #078f59; color: white; font-weight: bold; width: 125px;">
+                                        {{ news.date|date:"F j, Y" }}
+                                    </div>
+                                    <div style="margin-left: 10px;">
+                                        <a href="{{ news.url }}" class="btn btn-outline-success" target="_blank">Click here to read the news</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+          
+        </div>
+    </div>
+</div>  
+
+{% endblock %}
+{% block static %}
+
+{% endblock %}
