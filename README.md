@@ -21,3 +21,5 @@ Need to set username and password.
   python manage.py runserver
 ```
 The project will run by following these steps.
+
+If the project run in any Ubuntu system then in the place of python need to put python with version. As an example python3
