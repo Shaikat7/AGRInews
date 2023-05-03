@@ -22,4 +22,4 @@ Need to set username and password.
 ```
 The project will run by following these steps.
 
-If the project run in any Ubuntu system then in the place of python need to put python with version. As an example python3
+If the project run in any Ubuntu system then in the place of **python need to put python with version**. As an example **python3**
